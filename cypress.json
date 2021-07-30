@@ -1,0 +1,16 @@
+{
+  "chromeWebSecurity": false,
+  "scrollBehavior": false,
+  "pageLoadTimeout": 30000,
+  "defaultCommandTimeout": 15000,
+  "env": {
+    "url": "https://jdedv.yleo.us/"
+  },
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "testFiles": "**/*.feature",
+  "retries": {
+    "runMode": 0,
+    "openMode": 0
+  }
+}

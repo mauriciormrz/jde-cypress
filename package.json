@@ -1,0 +1,37 @@
+{
+  "name": "jde",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open": "./node_modules/.bin/cypress open",
+    "test": "NO_COLOR=1 ./node_modules/.bin/cypress run",
+    "color": "./node_modules/.bin/cypress run",
+    "testChrome": "npm run test -- --browser chrome --headless",
+    "testDashboard": "npm run test -- --record --key e72fc819-21be-404c-8fe8-a00a8261b32c",
+    "testDashboardChromeHeadless": "npm run test -- --record --key e72fc819-21be-404c-8fe8-a00a8261b32c --browser chrome --headless",
+    "testLogin": "npm run testDashboardChromeHeadless -- --spec \"cypres/integration/Cucumber/Regresion/*\""
+  },
+  "author": "Mauricio Ramírez",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.1.0",
+    "cypress-cucumber-preprocessor": "^4.1.4",
+    "cypress-iframe": "^1.0.1",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-xpath": "^1.6.2",
+    "install": "^0.13.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "npm": "^7.20.3",
+    "or": "^0.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
